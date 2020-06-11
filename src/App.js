@@ -7,7 +7,7 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
-//Step 3
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Step 3
 import { ProductContext } from './contexts/ProductContext'
 import { CartContext } from './contexts/CartContext'
 
@@ -17,7 +17,9 @@ function App() {
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
-		// add the given item to the cart``````Step1
+		// add the given item to the cart
+
+		//!!!!!!!!!!!!!!!!!!!!!!!!!!Step1
 		setCart(
 			[...cart, item]
 		)
@@ -38,9 +40,9 @@ function App() {
 	return (
 		<div className="App">
 
-			{/* Step 3 */}
+			{/*!!!!!!!!!!!!!!!!!!!!!!Step 3 */}
 			<ProductContext.Provider value={{ addItem, products }}> {/* Can't we put cart inside here? */}
-				{/* Step 5 b? */}
+				{/* !!!!!!!!!!!!!!!!!!!!!!!!!!Step 5 b? */}
 				<CartContext.Provider value={{cart, removeItem}}> {/*```Changing for Sprint`````` */}
 				<Navigation />
 
